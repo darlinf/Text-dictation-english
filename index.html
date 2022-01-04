@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container-top">
+      <input
+        type="file"
+        class="custom-file-input"
+        name="inputfile"
+        id="inputfile"
+      />
+      <br /><br />
+      <button onclick="forSpeech()">Play</button>
+      <br /><br />
+      <div class="containerButton">
+        <button onclick="pauses()">Pause</button>
+        <button onclick="back()">Back</button>
+        <button onclick="join()">Join</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="showWords" class="wordContainer containerContainer">" "</div>
+    </div>
+
+    <div class="container-bottom">
+      <form class="setting">
+        <div>
+          <label for="rate">Rate</label>
+          <input
+            class="slider"
+            type="range"
+            min="0.5"
+            max="2"
+            value="1"
+            step="0.1"
+            id="rate"
+          />
+          <span class="rate-value">1</span>
+          <div class="clearfix"></div>
+        </div>
+        <div>
+          <label for="pitch">Pitch</label>
+          <input
+            class="slider"
+            type="range"
+            min="0"
+            max="2"
+            value="1"
+            step="0.1"
+            id="pitch"
+          />
+          <span class="pitch-value">1</span>
+          <div class="clearfix"></div>
+        </div>
+      </form>
+
+      <button onclick="talk()">Speak</button>
+      <span id="talkShow"></span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
